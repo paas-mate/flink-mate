@@ -1,7 +1,0 @@
-server:
-  port: 31013
-management:
-  endpoints:
-    web:
-      exposure:
-        include: health,info,prometheus
