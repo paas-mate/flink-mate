@@ -1,8 +1,10 @@
 #!/bin/bash
 
-echo "" >> $FLINK_HOME/conf/flink-conf.yaml
+echo "" > $FLINK_HOME/conf/flink-conf.yaml
 
 echo "jobmanager.rpc.address: flink-job-manager" >> $FLINK_HOME/conf/flink-conf.yaml
+
+echo "jobmanager.bind-host: 0.0.0.0" >> $FLINK_HOME/conf/flink-conf.yaml
 
 echo "rest.port: 8081" >> $FLINK_HOME/conf/flink-conf.yaml
 
@@ -11,6 +13,8 @@ echo "rest.address: 0.0.0.0" >> $FLINK_HOME/conf/flink-conf.yaml
 echo "rest.bind-port: 8081" >> $FLINK_HOME/conf/flink-conf.yaml
 
 echo "rest.bind-address: 0.0.0.0" >> $FLINK_HOME/conf/flink-conf.yaml
+
+echo "jobmanager.memory.process.size: 4096mb" >> $FLINK_HOME/conf/flink-conf.yaml
 
 if [ "$HA_ENABLE" == "true" ]; then
     if [ "$HIGH_AVAILABILITY" ]; then
