@@ -19,10 +19,10 @@ echo "jobmanager.memory.process.size: 4096mb" >> $FLINK_HOME/conf/flink-conf.yam
 if [ "$HA_ENABLE" == "true" ]; then
     # load s3 plugins
     echo "fs.allowed-fallback-filesystems: s3" >> $FLINK_HOME/conf/flink-conf.yaml
-    mkdir $FLINK_HOME/plugins/flink-s3-fs-presto
-    cp $FLINK_HOME/opt/flink-s3-fs-presto-*.jar $FLINK_HOME/plugins/flink-s3-fs-presto
-    mkdir $FLINK_HOME/plugins/flink-s3-fs-hadoop
-    cp $FLINK_HOME/opt/flink-s3-fs-hadoop-*.jar $FLINK_HOME/plugins/flink-s3-fs-hadoop
+    mkdir $FLINK_HOME/plugins/s3-fs-presto
+    cp $FLINK_HOME/opt/flink-s3-fs-presto-*.jar $FLINK_HOME/plugins/s3-fs-presto
+    mkdir $FLINK_HOME/plugins/s3-fs-hadoop
+    cp $FLINK_HOME/opt/flink-s3-fs-hadoop-*.jar $FLINK_HOME/plugins/s3-fs-hadoop
     # high availability config
     if [ "$HIGH_AVAILABILITY" ]; then
         echo "high-availability: $HIGH_AVAILABILITY" >> $FLINK_HOME/conf/flink-conf.yaml
