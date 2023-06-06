@@ -38,6 +38,7 @@ if [ "$HA_ENABLE" == "true" ]; then
     else
         echo "s3.endpoint: http://localhost:9000" >> $FLINK_HOME/conf/flink-conf.yaml
     fi
+    echo "s3.path.style.access: true" >> $FLINK_HOME/conf/flink-conf.yaml
     if [ "$S3_ACCESS_KEY" ]; then
         echo "s3.access-key: $S3_ACCESS_KEY" >> $FLINK_HOME/conf/flink-conf.yaml
     else
