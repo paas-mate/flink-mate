@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FLINK_CONF_FILE = $FLINK_HOME/conf/flink-conf.yaml
+FLINK_CONF_FILE=$FLINK_HOME/conf/flink-conf.yaml
 
 echo "" > $FLINK_CONF_FILE
 
