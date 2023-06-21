@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     branches:
-      - v1.12.7
+      - release-1-12-7
 
 permissions: write-all
 
@@ -34,6 +34,8 @@ jobs:
       - name: Release
         uses: shoothzj/latest-release-action@v1
         with:
+          tag_name: v1.12.7
+          release_name: v1.12.7
           files: flink-mate-1-12-7.tar.gz
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
