@@ -1,4 +1,4 @@
-FROM ttbb/flink:nake
+FROM ttbb/flink:nake-1-12-7
 
 COPY docker-build /opt/flink/mate
 
