@@ -95,8 +95,5 @@ if [ "$HA_ENABLE" == "true" ]; then
     fi
 fi
 
-# job manager conf
-echo "jobmanager.rpc.address: flink-job-manager" >> $FLINK_CONF_FILE
-echo "taskmanager.bind-host: 0.0.0.0" >> $FLINK_CONF_FILE
-echo "taskmanager.memory.process.size: 4096mb" >> $FLINK_CONF_FILE
-
+# metrics
+echo "metrics.reporter.prom.class: org.apache.flink.metrics.prometheus.PrometheusReporter" >> $FLINK_CONF_FILE
